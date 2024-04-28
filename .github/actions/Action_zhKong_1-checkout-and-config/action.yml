@@ -1,0 +1,21 @@
+# action.yml
+name: 'Action_zhKong_1-checkout-and-config'
+description: 'Greet someone and record the time'
+inputs:
+  ROUTER_MODEL:  # id of input
+    description: 'Who to greet'
+    required: true
+    default: 'World'
+  COMPILE_CONFIG:  # id of input
+    description: 'Who to greet'
+    required: true
+    default: 'World'
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.ROUTER_MODEL }}
+    - ${{ inputs.COMPILE_CONFIG }}
