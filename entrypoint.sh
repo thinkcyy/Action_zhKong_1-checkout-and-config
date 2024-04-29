@@ -24,9 +24,9 @@ df -h
 cd /github/workspace/
 git clone --depth 1  https://github.com/thinkcyy/OpenWRT-Action OpenWRT-Action 
 git clone --depth 1  https://github.com/AgustinLorenzo/openwrt -b main --single-branch ./OpenWRT-Action/openwrt
-echo "当前工作目录"
-pwd
-tree -L 3
+#echo "当前工作目录"
+#pwd
+#tree -L 3
  
 cd /github/workspace/OpenWRT-Action
 chmod +x ./zhKong/scripts/*.sh
