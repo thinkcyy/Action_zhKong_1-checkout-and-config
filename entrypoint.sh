@@ -23,12 +23,12 @@ df -h
 
 cd /github/workspace/
 git clone --depth 1  https://github.com/thinkcyy/OpenWRT-Action OpenWRT-Action 
-git clone --depth 1  https://github.com/AgustinLorenzo/openwrt -b main --single-branch ./openwrt
+git clone --depth 1  https://github.com/AgustinLorenzo/openwrt -b main --single-branch ./OpenWRT-Action/openwrt
 echo "当前工作目录"
 pwd
 tree -L 3
  
-
-chmod +x ./OpenWRT-Action/zhKong/scripts/*.sh
-cp -v ./OpenWRT-Action/zhKong/config/$INPUT_COMPILE_CONFIG.config ./OpenWRT-Action/zhKong/config/config-$INPUT_ROUTER_MODEL.config
-./OpenWRT-Action/zhKong/scripts/prepare.sh
+cd /github/workspace/OpenWRT-Action
+chmod +x ./zhKong/scripts/*.sh
+cp -v ./zhKong/config/$INPUT_COMPILE_CONFIG.config ./zhKong/config/config-$INPUT_ROUTER_MODEL.config
+./zhKong/scripts/prepare.sh
