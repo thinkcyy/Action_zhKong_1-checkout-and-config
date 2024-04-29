@@ -1,4 +1,6 @@
 #!/bin/sh -l
+ROUTER_MODEL=$INPUT_ROUTER_MODEL
+COMPILE_CONFIG=$INPUT_COMPILE_CONFIG
 
 echo -e "Total CPU cores\t: $(nproc)"
 cat /proc/cpuinfo | grep 'model name'
@@ -28,5 +30,5 @@ tree -L 3
  
 
 chmod +x ./OpenWRT-Action/zhKong/scripts/*.sh
-cp -v ./OpenWRT-Action/zhKong/config/$INPUT_COMPILE_CONFIGL.config ./OpenWRT-Action/zhKong/config/config-$INPUT_ROUTER_MODEL.config
+cp -v ./OpenWRT-Action/zhKong/config/$INPUT_COMPILE_CONFIG.config ./OpenWRT-Action/zhKong/config/config-$INPUT_ROUTER_MODEL.config
 ./OpenWRT-Action/zhKong/scripts/prepare.sh
