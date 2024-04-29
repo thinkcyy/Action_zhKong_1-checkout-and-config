@@ -5,6 +5,7 @@ FROM ubuntu:22.04
 COPY entrypoint.sh /entrypoint.sh
 ARG DEBIAN_FRONTEND=noninteractive
 ENV DEBIAN_FRONTEND=noninteractive 
+ENV TZ=Asia/Shanghai
 #RUN DEBIAN_FRONTEND=noninteractive apt install -y tzdata
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
