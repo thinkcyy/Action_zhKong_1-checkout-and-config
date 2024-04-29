@@ -13,7 +13,7 @@ inputs:
   FILES_CONFIG:  # id of input
     description: 'Who to greet'
     required: false
-    default: 'pubulic'
+    default: 'public'
 outputs:
   time: # id of output
     description: 'The time we greeted you'
