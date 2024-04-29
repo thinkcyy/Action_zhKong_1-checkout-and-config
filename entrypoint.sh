@@ -63,7 +63,7 @@ rm -rf ./artifact/
 mkdir -p ./artifact/
 cp -vrf $(find ./openwrt/bin/targets/ -type f -name "*sysupgrade*") ./artifact/
 cp -vrf $(find ./openwrt/bin/targets/ -type f -name "*.buildinfo") ./artifact/
-cp -vr ./openwrt/.config ./artifact/defconfig-$INPUT_COMPILE_CONFIG.config
+cp -r ./openwrt/.config ./artifact/defconfig-$INPUT_COMPILE_CONFIG.config
 cd ./artifact/
 rename 's/sysupgrade.bin/sysupgrade-$tag_name.bin/' *
 ls -Ahl
