@@ -6,7 +6,7 @@ ulimit -a
 echo /etc/os-release
 
 swapoff -a
-#rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
+rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
 apt-get update && apt-get install -y git
 #wget -P /usr/local/sbin/ https://github.com/HiGarfield/lede-17.01.4-Mod/raw/master/.github/backup/apt-fast
 #chmod -R 755 /usr/local/sbin/apt-fast
