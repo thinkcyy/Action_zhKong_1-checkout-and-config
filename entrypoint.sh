@@ -3,7 +3,7 @@
 echo -e "Total CPU cores\t: $(nproc)"
 cat /proc/cpuinfo | grep 'model name'
 ulimit -a 
-echo /etc/os-release
+cat /etc/os-release
 
 swapoff -a
 rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
@@ -28,5 +28,5 @@ tree -L 3
  
 
 chmod +x ./OpenWRT-Action/zhKong/scripts/*.sh
-cp -v ./OpenWRT-Action/zhKong/config/$COMPILE_CONFIG.config ./OpenWRT-Action/zhKong/config/config-$ROUTER_MODEL.config
+cp -v ./OpenWRT-Action/zhKong/config/$INPUT_ROUTER_MODEL.config ./OpenWRT-Action/zhKong/config/config-$INPUT_ROUTER_MODEL.config
 ./OpenWRT-Action/zhKong/scripts/prepare.sh
