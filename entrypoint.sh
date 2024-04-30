@@ -7,6 +7,7 @@ echo -e "Total CPU cores\t: $(nproc)"
 cat /proc/cpuinfo | grep 'model name'
 ulimit -a 
 cat /etc/os-release
+df -h
 
 swapoff -a
 rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
