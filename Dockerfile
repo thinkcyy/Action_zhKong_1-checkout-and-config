@@ -7,6 +7,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 ENV DEBIAN_FRONTEND=noninteractive 
 ENV TZ=Asia/Shanghai
 ENV FORCE_UNSAFE_CONFIGURE=1
+ENV FORCE=1
 #RUN DEBIAN_FRONTEND=noninteractive apt install -y tzdata
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
