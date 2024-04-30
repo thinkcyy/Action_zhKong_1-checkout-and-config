@@ -41,7 +41,7 @@ cd /github/workspace/OpenWRT-Action
 cp -vr ../openwrt-config/$INPUT_ROUTER_MODEL/files ./openwrt/
 chmod +x ./openwrt/files/etc/tinc/tincvpn/tinc-up
 
-/*
+
 echo '当前执行步骤：4-编译'
 cd /github/workspace/OpenWRT-Action/openwrt
 echo '当前执行步骤：4.1-下载'
@@ -68,7 +68,7 @@ cp -r ./openwrt/.config ./artifact/defconfig-$INPUT_COMPILE_CONFIG.config
 cd ./artifact/
 rename 's/sysupgrade.bin/sysupgrade-$tag_name.bin/' *
 ls -Ahl
-*/
+
 
 
 
